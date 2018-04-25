@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="state_item_pressed">#e51c23</color>
+    <color name="state_item_normal">#f36c60</color>
+    <color name="refresh_bg">#B3E5FC</color> <!-- 500 -->
+</resources>

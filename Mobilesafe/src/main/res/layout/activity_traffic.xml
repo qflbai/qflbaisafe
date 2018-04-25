@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_traffic"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="流量统计"
+        style="@style/myTitleStyle"/>
+
+    <SlidingDrawer
+        android:orientation="horizontal"
+        android:handle="@+id/handle"
+        android:content="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/handle"
+            android:src="@mipmap/mobilesafe"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:text="我是抽屉，被拖拽了"
+            android:gravity="center"
+            android:id="@+id/content"
+            android:background="#F0F"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </SlidingDrawer>
+
+</LinearLayout>

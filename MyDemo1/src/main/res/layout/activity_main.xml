@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_main"
+                android:background="#0f0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+        <FrameLayout
+        android:background="#f0f"
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+    <LinearLayout
+        android:background="#00ff00"
+        android:layout_gravity = "left"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

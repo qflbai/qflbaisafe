@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical" >
+
+    <!-- 将相同的代码抽取到样式中，可以简化代码的书写 -->
+
+    <TextView
+        style="@style/myTitleStyle"
+        android:text="@string/homeActivity_Title" />
+
+    <com.qflbai.mobilesafe.view.FocusTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/homeActivity_text"
+        android:singleLine="true"
+        android:textColor="#ff00ff00"
+        android:padding="10dp"
+        android:textSize="13sp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        />
+
+    <GridView
+        android:layout_marginTop="10dp"
+        android:verticalSpacing="10dp"
+        android:id="@+id/gv_homeActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        ></GridView>
+
+</LinearLayout>

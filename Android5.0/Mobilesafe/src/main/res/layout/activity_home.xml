@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        style="@style/myTitleStyle"
+        android:text="@string/homeActivity_title"
+        />
+
+    <!--使用自定义控件实现跑马灯效果，其实就重写原有的textview,让其一直获取焦点 -->
+
+    <!-- <TextView
+         android:text="叫声小妹听我说，我是真心把你爱，你把我跟我珍惜，我会对你一辈子。。。。。"
+         android:layout_width="match_parent"
+         android:singleLine="true"
+         android:padding="8dp"
+         android:textSize="15sp"
+         android:ellipsize="marquee"
+         android:focusableInTouchMode="true"
+         android:focusable="true"
+         android:marqueeRepeatLimit="marquee_forever"
+         android:elevation="8dp"
+         android:textColor="#22ff00"
+         android:layout_height="wrap_content"
+         android:id="@+id/textView"/>-->
+    <FocusTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:text="@string/homeActivity_text"
+        android:textColor="#22ff00"
+        android:textSize="15sp"
+        />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+     <!--   <GridView
+            android:id="@+id/gv_homeActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:numColumns="3"
+            android:verticalSpacing="10dp"
+            />-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eaeaea"
+            android:padding="5dp"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

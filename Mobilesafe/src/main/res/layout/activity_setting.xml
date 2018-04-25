@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mobilesafe="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/myTitleStyle"
+        android:text="@string/settingActivity_title"/>
+
+    <com.qflbai.mobilesafe.view.SettingItemView
+        android:id="@+id/siv_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mobilesafe:desOff="自动更新已关闭"
+        mobilesafe:desOn="自动更新已开启"
+        mobilesafe:destitle="自动更新设置"/>
+
+    <com.qflbai.mobilesafe.view.SettingItemView
+        android:id="@+id/siv_Address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mobilesafe:desOff="归属地的显示已关闭"
+        mobilesafe:desOn="归属地的显示已开启"
+        mobilesafe:destitle="电话归属地的显示设置"/>
+
+    <com.qflbai.mobilesafe.view.SettingItemOnClick
+        android:id="@+id/sic_toast_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.qflbai.mobilesafe.view.SettingItemOnClick
+        android:id="@+id/sic_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.qflbai.mobilesafe.view.SettingItemView
+        android:id="@+id/siv_startAndClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mobilesafe:desOff="小火箭已关闭"
+        mobilesafe:desOn="小火箭已开启"
+        mobilesafe:destitle="火箭的开启和关闭"/>
+
+    <com.qflbai.mobilesafe.view.SettingItemView
+        android:id="@+id/siv_blackNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mobilesafe:desOff="黑名单拦截已关闭"
+        mobilesafe:desOn="黑名单拦截已开启"
+        mobilesafe:destitle="黑名单拦截设置"/>
+
+
+    <com.qflbai.mobilesafe.view.SettingItemView
+        android:id="@+id/siv_lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mobilesafe:desOff="程序锁已关闭"
+        mobilesafe:desOn="程序锁已开启"
+        mobilesafe:destitle="程序锁设置"/>
+</LinearLayout>

@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:mobilesafe="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        style="@style/myTitleStyle"
+        android:text="@string/setup2_title" />
+
+    <TextView
+        style="@style/mydec"
+        android:text="@string/setup2_text" >
+    </TextView>
+
+    <com.kongweijun.mymobilesafe.view.SettingItemView
+        android:id="@+id/siv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mobilesafe:desOff="Sim卡未绑定"
+        mobilesafe:desOn="Sim卡已绑定"
+        mobilesafe:destitle="点击绑定Sim卡" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_online" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bind" />
+
+        <Button style="@style/nextBtn" />
+        <Button style="@style/preBtn" />
+    </RelativeLayout>
+
+</LinearLayout>

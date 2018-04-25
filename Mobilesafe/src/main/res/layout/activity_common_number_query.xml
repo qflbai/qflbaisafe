@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_common_number_query"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/myTitleStyle"
+        android:text="常用号码的查询"
+        />
+
+    <!--可以扩展的listView,和listview类似-->
+
+    <ExpandableListView
+        android:id="@+id/elv_expandable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>

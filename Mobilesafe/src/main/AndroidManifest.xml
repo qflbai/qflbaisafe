@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.qflbai.mobilesafe">
+
+    <!-- 相应模块需要的权限 -->
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- //获取准确GPS坐标的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- //获取粗略坐标的权限(网络定位时使用) -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 在窗体上挂在view的权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- 去电广播监听的权限 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <!-- 拦截电话需要用到的权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <!-- 杀死后台进程的权限 -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <!-- root手机 -->
+    <!-- <uses-permission android:name="android.permission.DELETE_CACHE_FILES" /> -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- 以下为可选权限 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:name="com.qflbai.mobilesafe.global.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/mobilesafe"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 系统默认启动的Activity: android:theme="@style/GreenTheme" -->
+        <activity
+            android:name="com.qflbai.mobilesafe.activity.SpalshActivity"
+            android:theme="@style/SpalshActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.qflbai.mobilesafe.activity.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.Home"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <!-- 四大组件的配置的清单文件位置 -->
+        <!-- 四大组件的配置的清单文件Activity -->
+        <!--
+         standard : 标准的启动模式
+         singleTop : 如果activity在栈顶,直接使用
+         singleTask : 如果任务栈中有activity的,之前的activity删除,将activity置顶
+         singleInstance : 将activity单独存放一个任务栈中
+         excludeFromRecents : 是否在最近列表中显示    true:不显示      false:显示,只有设置这个属性的activity运行了,这个属性才会生效
+         -->
+        <!-- 配置任务栈的启动方式 android:launchMode="singleInstance" -->
+        <!--android:excludeFromRecents="true"-->
+        <!--TRUE代表不要去显示手机卫士最近的图标，FALSE代表
+        要显示最近手机卫士最近的图标-->
+        <activity
+            android:name="com.qflbai.mobilesafe.activity.EnterPwdActivity"
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true"
+            />
+        <activity
+            android:name="com.qflbai.mobilesafe.activity.BackgroundActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name="com.qflbai.mobilesafe.activity.ToastLocationActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.SDCacheClearActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.CacheClearActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.BaseCacheClearActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.AppLockActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.ProcessSettingActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.ProcessManagerActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.AppManagerActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.AToolActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.QueryAddressActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.HomeActivity1"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.SetupOverActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.SettingActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.Setup1Activity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.Setup2Activity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.Setup3Activity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.Setup4Activity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.BlackNumberActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.ContactListActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.CommonNumberQueryActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.AnitVirusActivity"/>
+        <activity android:name="com.qflbai.mobilesafe.activity.TrafficActivity"/>
+        <!-- 四大组件的配置的清单文件BroadcastReceiver -->
+
+        <receiver android:name="com.qflbai.mobilesafe.receiver.KillProcessReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.KILL_BACKGROUND_PROCESS"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.qflbai.mobilesafe.receiver.MyAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/example_appwidget_info"/>
+        </receiver>
+        <receiver android:name="com.qflbai.mobilesafe.receiver.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.qflbai.mobilesafe.receiver.SmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.qflbai.mobilesafe.receiver.AdminReceiver"
+            android:description="@string/sample_device_admin_description"
+            android:label="@string/sample_device_admin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample"/>
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+        </receiver>
+        <!-- 四大组件的配置的清单文件Service -->
+        <service android:name="com.qflbai.mobilesafe.service.LocationService"/>
+        <service android:name="com.qflbai.mobilesafe.service.AddressService"/>
+        <service android:name="com.qflbai.mobilesafe.service.RocketService"/>
+        <service android:name="com.qflbai.mobilesafe.service.BlackNumberService"/>
+        <service
+            android:name="com.qflbai.mobilesafe.service.LockScreenService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <service android:name="com.qflbai.mobilesafe.service.UpdateWidgetService"/>
+        <service android:name="com.qflbai.mobilesafe.service.WatchDogService"/>
+    </application>
+
+</manifest>

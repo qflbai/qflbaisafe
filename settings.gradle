@@ -1,0 +1,1 @@
+include ':Android5.0', ':Mobilesafe', ':ViewPagerIndicator_library', ':ShoppingMall', ':banner', ':okhttputils', ':opendanmaku', ':FlycoTabLayout_Lib'
